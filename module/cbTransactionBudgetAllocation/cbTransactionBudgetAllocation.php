@@ -51,68 +51,68 @@ class cbTransactionBudgetAllocation extends CRMEntity {
 	public $list_fields = array(
 		/* Format: Field Label => array(tablename => columnname) */
 		// tablename should not have prefix 'vtiger_'
-		'Transaction Budget Allocation No'=> array('cbtransactionbudgetallocation' => 'transactionbudgetallocationno'),
+		'Transaction Budget Allocation No'=> array('cbtransactionbudgetallocation' => 'cbtransactionbudgetallocationno'),
 		'Related To'=> array('cbtransactionbudgetallocation' => 'relto'),
 		'Budget Item'=> array('cbtransactionbudgetallocation' => 'budgetitem'),
-		'Percentage'=> array('cbtransactionbudgetallocation' => 'percentage'),
 		'Allocated Amount'=> array('cbtransactionbudgetallocation' => 'pbamount'),
+		'Percentage'=> array('cbtransactionbudgetallocation' => 'percentage'),
 		'Assigned To' => array('crmentity' => 'smownerid')
 	);
 	public $list_fields_name = array(
 		/* Format: Field Label => fieldname */
-		'Transaction Budget Allocation No'=> 'transactionbudgetallocationno',
+		'Transaction Budget Allocation No'=> 'cbtransactionbudgetallocationno',
 		'Related To'=> 'relto',
 		'Budget Item'=> 'budgetitem',
-		'Percentage'=> 'percentage',
 		'Allocated Amount'=> 'pbamount',
+		'Percentage'=> 'percentage',
 		'Assigned To' => 'assigned_user_id'
 	);
 
 	// Make the field link to detail view from list view (Fieldname)
-	public $list_link_field = 'transactionbudgetallocationno';
+	public $list_link_field = 'cbtransactionbudgetallocationno';
 
 	// For Popup listview and UI type support
 	public $search_fields = array(
 		/* Format: Field Label => array(tablename => columnname) */
 		// tablename should not have prefix 'vtiger_'
-		'Transaction Budget Allocation No'=> array('cbtransactionbudgetallocation' => 'transactionbudgetallocationno'),
+		'Transaction Budget Allocation No'=> array('cbtransactionbudgetallocation' => 'cbtransactionbudgetallocationno'),
 		'Related To'=> array('cbtransactionbudgetallocation' => 'relto'),
 		'Budget Item'=> array('cbtransactionbudgetallocation' => 'budgetitem'),
+		'Allocated Amount'=> array('cbtransactionbudgetallocation' => 'pbamount'),
 		'Percentage'=> array('cbtransactionbudgetallocation' => 'percentage'),
-		'Allocated Amount'=> array('cbtransactionbudgetallocation' => 'pbamount')
 	);
 	public $search_fields_name = array(
 		/* Format: Field Label => fieldname */
-		'Transaction Budget Allocation No'=> 'transactionbudgetallocationno',
+		'Transaction Budget Allocation No'=> 'cbtransactionbudgetallocationno',
 		'Related To'=> 'relto',
 		'Budget Item'=> 'budgetitem',
+		'Allocated Amount'=> 'pbamount',
 		'Percentage'=> 'percentage',
-		'Allocated Amount'=> 'pbamount'
 	);
 
 	// For Popup window record selection
-	public $popup_fields = array('transactionbudgetallocationno');
+	public $popup_fields = array('cbtransactionbudgetallocationno');
 
 	// Placeholder for sort fields - All the fields will be initialized for Sorting through initSortFields
 	public $sortby_fields = array();
 
 	// For Alphabetical search
-	public $def_basicsearch_col = 'transactionbudgetallocationno';
+	public $def_basicsearch_col = 'cbtransactionbudgetallocationno';
 
 	// Column value to use on detail view record text display
-	public $def_detailview_recname = 'transactionbudgetallocationno';
+	public $def_detailview_recname = 'cbtransactionbudgetallocationno';
 
 	// Required Information for enabling Import feature
-	public $required_fields = array('transactionbudgetallocationno'=>1);
+	public $required_fields = array('cbtransactionbudgetallocationno'=>1);
 
 	// Callback function list during Importing
 	public $special_functions = array('set_import_assigned_user');
 
-	public $default_order_by = 'transactionbudgetallocationno';
+	public $default_order_by = 'cbtransactionbudgetallocationno';
 	public $default_sort_order='ASC';
 	// Used when enabling/disabling the mandatory fields for the module.
 	// Refers to vtiger_field.fieldname values.
-	public $mandatory_fields = array('createdtime', 'modifiedtime', 'transactionbudgetallocationno');
+	public $mandatory_fields = array('createdtime', 'modifiedtime', 'cbtransactionbudgetallocationno');
 
 	public function save_module($module) {
 		if ($this->HasDirectImageField) {
@@ -128,7 +128,7 @@ class cbTransactionBudgetAllocation extends CRMEntity {
 	public function vtlib_handler($modulename, $event_type) {
 		if ($event_type == 'module.postinstall') {
 			// Handle post installation actions
-			$this->setModuleSeqNumber('configure', $modulename, 'cbtransbudget-', '0000001');
+			$this->setModuleSeqNumber('configure', $modulename, 'TBA-', '00000001');
 		} elseif ($event_type == 'module.disabled') {
 			// Handle actions when this module is disabled.
 		} elseif ($event_type == 'module.enabled') {

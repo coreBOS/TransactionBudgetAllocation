@@ -9,25 +9,19 @@
  ************************************************************************************/
 
 $mod_strings = array(
-	'cbTransactionBudgetAllocation' => 'TransactionBudgetAllocations',
-	'SINGLE_cbTransactionBudgetAllocation' => 'TransactionBudgetAllocation',
-	'TransactionBudgetAllocation ID' => 'TransactionBudgetAllocation ID',
+	'cbTransactionBudgetAllocation' => 'Transaction-Budget Allocations',
+	'SINGLE_cbTransactionBudgetAllocation' => 'Transaction-Budget Allocation',
+	'cbTransactionBudgetAllocation ID' => 'TBA ID',
 
 	'LBL_CUSTOM_INFORMATION' => 'Custom Information',
-	'LBL_cbTransactionBudgetAllocation_INFORMATION' => 'TransactionBudgetAllocation Information',
+	'LBL_cbTransactionBudgetAllocation_INFORMATION' => 'Transaction-Budget Allocation',
 	'LBL_DESCRIPTION_INFORMATION' => 'Description',
 
-	'TransactionBudgetAllocation' => 'TransactionBudgetAllocation',
-	'Transaction Budget Allocation No' => 'Transaction Budget Allocation No',
+	'TransactionBudgetAllocation' => 'Transaction-Budget Allocation',
+	'Transaction Budget Allocation No' => 'TBA No',
 	'Related To' => 'Related To',
 	'Budget Item' => 'Budget Item',
 	'Percentage' => 'Percentage',
 	'Allocated Amount' => 'Allocated Amount',
-	'Assigned To' => 'Assigned To',
-	'Created By' => 'Created By',
-	'Created Time' => 'Created Time',
-	'Modified Time' => 'Modified Time',
-	'Description' => 'Description',
-
 );
 ?>
